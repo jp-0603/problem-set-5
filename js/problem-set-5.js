@@ -26,7 +26,13 @@ function mario() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 1 CODE HERE
+  height= prompt("Enter your height")
+   if (height>=23){
+      document.getElementById('mario-easy-output')
+   }
+  else{
+     invalid=prompt("Enter a integer below 23")
+   }
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
@@ -114,7 +120,8 @@ function credit() {
   let card; // DO NOT MODIFY
   //////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+card=prompt(`Enter your Credit Card Number`)
+  if(credit)
 
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
