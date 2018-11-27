@@ -29,6 +29,7 @@ function mario() {
   height= prompt("Enter your height")
    if (height>=23){
       document.getElementById('mario-easy-output')
+
    }
   else{
      invalid=prompt("Enter a integer below 23")
@@ -67,8 +68,7 @@ function marioAgain() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
-
+height=prompt(`Enter your height`)
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
   //////////////////////////////// DO NOT MODIFY
@@ -121,7 +121,7 @@ function credit() {
   //////////// DO NOT MODIFY
 
 card=prompt(`Enter your Credit Card Number`)
-  if(credit)
+  if (credit)
 
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
@@ -196,6 +196,21 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+
+
+windspeed=prompt(`Enter miles per hour of the windspeed`)
+while(windspeed)
+if (windspeed<=0){
+  prompt(`Enter a valid positive integer`)
+}
+if (hurricane>157){
+  let div5 = getElementById('hurricane-output')
+  div5.innerhtml= "Category 5 Storm"
+}
+if(hurricane<=38){
+ getElementById('hurricane-output')
+.innerhtml= "There is a slight breeze in the sky!"
+}
 
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
