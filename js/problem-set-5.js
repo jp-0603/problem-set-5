@@ -195,41 +195,35 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+windspeed=Number(prompt(`Enter miles per hour of the windspeed`))
 
+while (windspeed < 0){
+  windspeed=Number(prompt(`Enter miles per hour of the windspeed`))
+}
+while(Number.isInteger(windspeed) == false) {
+  Number(prompt(`Enter a valid positive interger`));
+}
 
-windspeed=prompt(`Enter miles per hour of the windspeed`)
-while(windspeed<0)
-parseInt(windspeed)
-if (windspeed<=0){
-  prompt(`Enter a valid positive integer`)
+if (windspeed>=157){
+  document.getElementById('hurricane-output').innerHTML= "Category 5 Hurricane."
 }
-if (hurricane>=157){
-  getElementById('hurricane-output')
-  .innerhtml= "Category 5 Storm"
+if(windspeed<=38){
+ document.getElementById('hurricane-output').innerHTML= "The skies are calm..."
 }
-if(hurricane<=38){
- getElementById('hurricane-output')
- .innerhtml= "There is a slight breeze in the sky!"
+if (windspeed>=39 && windspeed<=79){
+  document.getElementById(`hurricane-output`).innerHTML="Tropical Storm."
 }
-if (hurricane>=39 && hurricane<=79){
-  getElementById(`hurricane-output`)
-  .innerhtml="Tropical Storm"
+if (windspeed>=74 && windspeed<=95){
+  document.getElementById(`hurricane-output`).innerHTML="Category 1 Hurricane."
 }
-if (hurricane>=74 && hurricane<=95){
-  getElementById(`hurricane-output`)
-  .innerhtml="Category 1 Storm"
+if (windspeed>=96 && windspeed<=110){
+  document.getElementById(`hurricane-output`).innerHTML="Category 2 Hurricane."
 }
-if (hurricane>=96 && hurricane<=110){
-  getElementById(`hurricane-output`)
-  .innerhtml="Category 2 Storm"
+if (windspeed>=111 && windspeed<=129){
+  document.getElementById(`hurricane-output`).innerHTML="Category 3 Hurricane."
 }
-if (hurricane>=111 && hurricane<=129){
-  getElementById(`hurricane-output`)
-  .innerhtml="Category 3 Storm"
-}
-if (hurricane>=130 && hurricane<=156){
-  getElementById(`hurricane-output`)
-  .innerhtml="Category 4 Storm"
+if (windspeed>=130 && windspeed<=156){
+  document.getElementById(`hurricane-output`).innerHTML="Category 4 Hurricane."
 }
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
