@@ -30,9 +30,12 @@ function mario() {
    if (height>=1 && height<=23){
       document.getElementById('mario-easy-output')
    }
-  else{
-     invalid=prompt("Enter a integer below 23")
-   }
+   while (height < 0){
+     height=Number(prompt(`Enter a interger between 1 and 23 `))
+}
+while(Number.isInteger(height) == false){
+  Number(prompt(`Enter a interger between 1 and 23`))
+}
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
@@ -159,7 +162,12 @@ card=prompt(`Enter your Credit Card Number`)
 
 function guess() {
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+let randomnbr=Math.floor(Math.random(1)*1000)
+console.log(randomnbr)
+guess=Number(prompt(`Enter a random guess`));
+a=0
+
+while(guess=randomnbr)
 
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
