@@ -26,17 +26,31 @@ function mario() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
-  height= prompt("Enter your height")
-   if (height>=1 && height<=23){
-      document.getElementById('mario-easy-output')
-   }
-   while (height < 0){
-     height=Number(prompt(`Enter a interger between 1 and 23 `))
-}
-while(Number.isInteger(height) == false){
-  Number(prompt(`Enter a interger between 1 and 23`))
+  let hashtag = `#`;
+    let space = `&nbsp`
+    let lines = ``;
+    while(true) {
+      height = Number(prompt(`Enter An Integer Between 1 And 23`));
+
+if(height >= 1 && height <= 23 && Number.isInteger(height)) {
+        for(let a=0; a<height; a++) {
+
+        for(let b=0; b<=(height-2-a);b++) {
+            lines = lines + space;
+          }
+
+          for(let c=0; c<=(1+a);c++) {
+            lines = lines + hashtag;
+          }
+
+          lines = lines + `<br>`;
+        }
+        document.getElementById(`mario-easy-output`)
+        .innerHTML=`<code>`+lines+`</code>`;
+break;
 }
 
+}
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -69,8 +83,38 @@ function marioAgain() {
   ////////////// DO NOT MODIFY
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
+  let hashtag = "#";
+    let space = "&nbsp;"
+    let lines = "";
+    while(true) {
+      height = Number(prompt("Enter an integer between 1 and 23"));
+      if(height >= 1 && height <= 23 && Number.isInteger(height)) {
+        for(let a=0; a<height; a++) {
 
-height=prompt(`Enter your height`)
+          for(let b=0; b<=(height-2-a);b++) {
+            lines = lines + space;
+          }
+
+          for(let c=0; c<=(1+a);c++) {
+            lines = lines + hashtag;
+          }
+          lines = lines + space + space ;
+
+// MIRROR HERE
+          for(let d=0; d<=(1+a); d++){
+            lines = lines + hashtag
+          }
+
+          lines = lines + "<br>";
+        }
+//input
+    document.getElementById("mario-hard-output")
+    .innerHTML="<code>"+lines+"</code>";
+        break;
+      }
+
+    }
+
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
   //////////////////////////////// DO NOT MODIFY
@@ -213,25 +257,25 @@ while(Number.isInteger(windspeed) == false) {
 }
 
 if (windspeed>=157){
-  document.getElementById('hurricane-output').innerHTML= "Category 5 Hurricane."
+  document.getElementById('hurricane-output').innerHTML= `Category 5 Hurricane.`
 }
 if(windspeed<=38){
- document.getElementById('hurricane-output').innerHTML= "The skies are calm..."
+ document.getElementById('hurricane-output').innerHTML= `The skies are calm...`
 }
 if (windspeed>=39 && windspeed<=79){
-  document.getElementById(`hurricane-output`).innerHTML="Tropical Storm."
+  document.getElementById(`hurricane-output`).innerHTML=`Tropical Storm.`
 }
 if (windspeed>=74 && windspeed<=95){
-  document.getElementById(`hurricane-output`).innerHTML="Category 1 Hurricane."
+  document.getElementById(`hurricane-output`).innerHTML=`Category 1 Hurricane.`
 }
 if (windspeed>=96 && windspeed<=110){
-  document.getElementById(`hurricane-output`).innerHTML="Category 2 Hurricane."
+  document.getElementById(`hurricane-output`).innerHTML=`Category 2 Hurricane.`
 }
 if (windspeed>=111 && windspeed<=129){
-  document.getElementById(`hurricane-output`).innerHTML="Category 3 Hurricane."
+  document.getElementById(`hurricane-output`).innerHTML=`Category 3 Hurricane.`
 }
 if (windspeed>=130 && windspeed<=156){
-  document.getElementById(`hurricane-output`).innerHTML="Category 4 Hurricane."
+  document.getElementById(`hurricane-output`).innerHTML=`Category 4 Hurricane.`
 }
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
